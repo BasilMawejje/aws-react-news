@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import NewsList from './components/news/NewsList';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-fluid">
+      <div className="navbar-fixed">
+        <nav>
+          <div className="nav-wrapper blue-grey darken-1">
+            <a href="/" className="brand-logo">
+              News
+            </a>
+            <ul className="right hide-on-med-and-down">
+          </ul>
+        </div>
+      </nav>
     </div>
+
+    <div className="row">
+      <div className="col s12 m12 l12">
+        <h3>Top Headlines</h3>
+        <NewsList />
+        <hr />
+      </div>
+    </div>
+  </div>
   );
 }
 
